@@ -1,5 +1,5 @@
 import FilterableProductTable from './components/FilterableProductTable'
-import PRODUCTS from './assets/Products'
+import PRODUCTS from './data/Products'
 import { useState } from 'react'
 import './App.css'
 
