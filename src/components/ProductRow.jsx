@@ -1,5 +1,5 @@
 function ProductRow({ product }) {
-    const title = (product.stock > 50) ? product.title :
+    const title = (product.year < 1984) ? product.title :
         <span style={{ color: 'red' }}>
             {product.title}
         </span>;
