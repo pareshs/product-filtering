@@ -6,18 +6,15 @@ function ProductRow({ product }) {
         </div>
         <div className="col-9">
             <h3>{product.title}</h3>
+            <p class="item">{product.plot}</p>
             <ul class="items">
-                <li class="item">
-                    <span className="item-title">Release Year:</span>    
-                    <span className="info-body">{product.year}</span>
+                <li class="item"> 
+                    <span className="info-body">
+                        {product.genres.map(item => <span class="badge text-bg-secondary">{item}</span>)}
+                    </span>
                 </li>
                 <li class="item">
-                    <span className="item-title">Runtime:</span>    
-                    <span className="info-body">{product.runtime}</span>
-                </li>
-                <li class="item">
-                    <span className="item-title">Genres:</span>    
-                    <span className="info-body">{product.genres}</span>
+                    <span className="info-body">{product.year} {product.runtime} minutes</span>
                 </li>
                 <li class="item">
                     <span className="item-title">Director:</span>    
@@ -27,10 +24,7 @@ function ProductRow({ product }) {
                     <span className="item-title">Actors:</span>    
                     <span className="info-body">{product.actors}</span>
                 </li>
-                <li class="item">
-                    <span className="item-title">Plot:</span>    
-                    <span className="info-body">{product.plot}</span>
-                </li>
+               
             </ul>
             
 
